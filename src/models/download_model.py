@@ -1,15 +1,20 @@
+import os
 import sys
 import logging
+from dotenv import load_dotenv
 
 from transformers import pipeline
 
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 handler = logging.StreamHandler(sys.stdout)
 logger.setLevel(logging.INFO)
 logger.addHandler(handler)
 
-modelname = "seara/rubert-tiny2-russian-sentiment"
+modelname = os.getenv('MODELNAME')
+
 
 def download(modelname: str) -> None:
     """
