@@ -27,6 +27,10 @@ def download(modelname: str) -> None:
     logger.info('Модель успешно загружена на ваше устройство')
 
 
-if __name__ == '__main__':
+def main():
     download(modelname=modelname)
+
+
+if __name__ == '__main__':
+    main
     
