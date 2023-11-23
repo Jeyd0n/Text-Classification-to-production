@@ -13,7 +13,7 @@ logger.addHandler(handler)
 
 def load_model(modelname: str) -> transformers.pipelines.text_classification.TextClassificationPipeline:
     """
-    Фукнция возвращает объект предобученной модели, который можно использовать в конечном продукте
+    Фукнция возвращает объект предобученной модели, который нужно использовать для загрузки в app.py
     """
     
     model = pipeline(model=modelname)
